@@ -1,0 +1,376 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Start Your Build | Site Cosmos">
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#7c3aed"/>
+          <text x="16" y="23" font-size="18" text-anchor="middle" fill="white" font-family="serif">✦</text>
+        </svg>
+        Site Cosmos
+      </a>
+      <a href="mailto:info@sitecosmos.com" class="btn-primary">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="start-hero">
+    <div class="start-hero-inner">
+      <p class="start-label">✦ Let's build something great</p>
+      <h1>
+        Stop losing clients<br/>
+        to competitors<br/>
+        <span class="accent">with better websites.</span>
+      </h1>
+      <p class="start-sub">
+        We build and manage <strong>conversion-focused websites</strong> so you show up on Google,
+        look the part, and turn visitors into paying clients.
+      </p>
+      <a href="mailto:info@sitecosmos.com" class="btn-primary btn-large">Book a Call →</a>
+    </div>
+  </section>
+
+  <!-- VIDEO PLACEHOLDER -->
+  <section class="video-section">
+    <div class="container">
+      <div class="video-wrapper">
+        <!-- Replace this with your video embed -->
+        <div class="video-placeholder">
+          <div class="play-icon">▶</div>
+          <p>Your video goes here</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="what-you-get">
+    <div class="container">
+      <h2>Everything included. Nothing to figure out.</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>Custom Design</h3>
+          <p>A site built specifically for your business, your brand, and your market — not a generic template.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>SEO + AI Visibility</h3>
+          <p>Structured for Google and the new wave of AI-powered search so customers find you first.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast Turnaround</h3>
+          <p>Most sites go live within 7–14 days of your kick-off call.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛠️</div>
+          <h3>Ongoing Management</h3>
+          <p>We handle updates, optimisations, and improvements as your business grows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Book a free call</h3>
+          <p>Tell us about your business, your goals, and what a stronger website should do for you.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>We build your site</h3>
+          <p>A professional, conversion-focused website tailored to your brand and industry.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>We manage it</h3>
+          <p>Ongoing updates, SEO tweaks, and performance improvements — all handled for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="start-cta">
+    <div class="container">
+      <h2>Ready to grow your business?</h2>
+      <p>Send us a message and we'll get back to you within 24 hours.</p>
+      <a href="mailto:info@sitecosmos.com" class="btn-primary btn-large">Book a Call →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <a href="/" class="logo">
+        <svg width="18" height="18" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#7c3aed"/>
+          <text x="16" y="23" font-size="18" text-anchor="middle" fill="white" font-family="serif">✦</text>
+        </svg>
+        Site Cosmos
+      </a>
+      <p class="footer-copy">© 2025 Site Cosmos. All rights reserved.</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0 2rem;
+    background: rgba(8, 8, 10, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-large {
+    padding: 1rem 2.2rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+
+  /* HERO */
+  .start-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .start-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(124,58,237,0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .start-hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  .start-label {
+    display: inline-block;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.3);
+    color: #a78bfa;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  .start-hero h1 {
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  .accent { color: var(--accent); }
+  .start-sub {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+  .start-sub strong { color: #fff; }
+
+  /* VIDEO */
+  .video-section {
+    padding: 2rem 2rem 5rem;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .video-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: rgba(255,255,255,0.3);
+  }
+  .play-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(124,58,237,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+
+  /* FEATURES */
+  .what-you-get {
+    padding: 5rem 2rem;
+    background: rgba(255,255,255,0.02);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .what-you-get h2, .process h2, .start-cta h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  .feature-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  .feature-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .feature-card p { color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.6; }
+
+  /* PROCESS */
+  .process { padding: 5rem 2rem; }
+  .steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+  }
+  .step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 0 auto 1rem;
+  }
+  .step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .step p { color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.6; }
+  .step-arrow {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.2);
+    margin-top: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  /* CTA */
+  .start-cta {
+    padding: 6rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .start-cta::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(124,58,237,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .start-cta p {
+    color: rgba(255,255,255,0.6);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 2rem;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-copy { color: rgba(255,255,255,0.4); font-size: 0.9rem; }
+</style>
