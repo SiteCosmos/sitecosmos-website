@@ -1,0 +1,511 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const steps = [
+  {
+    number: "1",
+    title: "Book a Free Call",
+    desc: "We start with a quick call to understand your business, your goals, and what a stronger website should do for you."
+  },
+  {
+    number: "2",
+    title: "We Build Your Site",
+    desc: "Our team builds a professional, conversion-focused website tailored to your brand, industry, and market."
+  },
+  {
+    number: "3",
+    title: "Ongoing Management",
+    desc: "We manage and update your site as your business grows, keeping it optimised as search and AI continue to evolve."
+  }
+];
+
+const faqs = [
+  {
+    q: "How does the process start?",
+    a: "It starts with a free discovery call. We learn about your business, your goals, and what's not working with your current online presence."
+  },
+  {
+    q: "Do you only build the site, or manage it too?",
+    a: "Both. We build it and manage it on an ongoing basis — updates, SEO tweaks, performance improvements, all included."
+  },
+  {
+    q: "How do you help with SEO and AI search visibility?",
+    a: "Every site we build is structured for both traditional search engines and the new wave of AI-powered search tools. Your business gets found."
+  },
+  {
+    q: "How fast can a site go live?",
+    a: "Most sites are live within 7–14 days of our kick-off call, depending on complexity."
+  },
+  {
+    q: "What kinds of businesses do you work with?",
+    a: "Any local or service-based business that needs a professional web presence — trades, agencies, consultants, retail, hospitality, and more."
+  }
+];
+---
+
+<Layout>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">✦</span>
+        Site Cosmos
+      </a>
+      <a href="#contact" class="btn-nav">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="badge">✓ SEO + AI Visibility. Done For You.</div>
+      <h1>Professional websites built<br />for your business.</h1>
+      <p class="hero-sub">Built to convert visitors into customers. SEO and AI search visibility included. Fully managed — no tech headaches.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Start Your Build</a>
+        <a href="#how-it-works" class="btn-ghost">How It Works ↓</a>
+      </div>
+      <div class="hero-checks">
+        <span>✓ Built to convert visitors into customers</span>
+        <span>✓ SEO and AI search visibility included</span>
+        <span>✓ Fully managed. No tech headaches.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUSTED BY -->
+  <section class="trusted">
+    <div class="container">
+      <p class="trusted-label">TRUSTED BY GROWING BUSINESSES</p>
+      <div class="trusted-logos">
+        <span>Construction</span>
+        <span>Landscaping</span>
+        <span>Roofing</span>
+        <span>Retail</span>
+        <span>Hospitality</span>
+        <span>Consulting</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how-it-works">
+    <div class="container">
+      <p class="section-label">HOW IT WORKS</p>
+      <h2>Three steps to a site<br />that sells for you</h2>
+      <div class="steps">
+        {steps.map(step => (
+          <div class="step">
+            <div class="step-num">{step.number}</div>
+            <h3>{step.title}</h3>
+            <p>{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="work" id="work">
+    <div class="container">
+      <p class="section-label">OUR WORK</p>
+      <h2>Real sites we build<br />and manage every day.</h2>
+      <p class="work-sub">Every site is live, managed by us, and built to turn visitors into paying clients.</p>
+      <div class="portfolio-grid">
+        {["Construction", "Landscaping", "Roofing", "Commercial Cleaning", "Steel Fabrication", "Window Cleaning"].map(industry => (
+          <div class="portfolio-card">
+            <div class="portfolio-img">
+              <span>{industry.charAt(0)}</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="industry-tag">{industry.toUpperCase()}</span>
+              <p>Client Website</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <p class="section-label">COMMON QUESTIONS</p>
+      <h2>Everything you need to know</h2>
+      <div class="faq-list">
+        {faqs.map(item => (
+          <details class="faq-item">
+            <summary>{item.q}</summary>
+            <p>{item.a}</p>
+          </details>
+        ))}
+      </div>
+      <p class="faq-email">Still have questions? Email us at <a href="mailto:info@sitecosmos.com">info@sitecosmos.com</a></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2>Your competitors already<br />have better websites.</h2>
+      <p>Book a short call and we'll walk through exactly what we'd build and manage for your business.</p>
+      <a href="mailto:info@sitecosmos.com" class="btn-primary btn-large">Start Your Build</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/" class="logo">
+          <span class="logo-icon">✦</span>
+          Site Cosmos
+        </a>
+        <div class="footer-links">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#work">Our Work</a>
+          <a href="#faq">FAQ</a>
+          <a href="mailto:info@sitecosmos.com">Contact</a>
+        </div>
+      </div>
+      <p class="footer-copy">© {new Date().getFullYear()} Site Cosmos. All rights reserved.</p>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(8,8,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .logo-icon { color: var(--accent); font-size: 1.2rem; }
+  .btn-nav {
+    background: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .btn-nav:hover { background: var(--accent-dark); }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 160px 0 100px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124,58,237,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.4);
+    color: #c4b5fd;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  .hero-sub {
+    font-size: 1.15rem;
+    color: #a1a1b5;
+    max-width: 560px;
+    margin: 0 auto 36px;
+    line-height: 1.7;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+  .btn-ghost {
+    background: rgba(255,255,255,0.07);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: background 0.2s;
+    display: inline-block;
+  }
+  .btn-ghost:hover { background: rgba(255,255,255,0.12); }
+  .hero-checks {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #a1a1b5;
+    font-size: 0.875rem;
+  }
+  .hero-checks span { display: flex; align-items: center; gap: 6px; }
+
+  /* TRUSTED */
+  .trusted {
+    padding: 48px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .trusted-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #6b6b80;
+    margin-bottom: 24px;
+  }
+  .trusted-logos {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .trusted-logos span {
+    color: #4a4a5a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* HOW IT WORKS */
+  .how {
+    padding: 100px 0;
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .how h2, .work h2, .faq h2, .cta h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 56px;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .step {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 36px;
+  }
+  .step-num {
+    width: 40px; height: 40px;
+    background: rgba(124,58,237,0.2);
+    border: 1px solid rgba(124,58,237,0.4);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #c4b5fd;
+    margin-bottom: 20px;
+  }
+  .step h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .step p { color: #a1a1b5; font-size: 0.95rem; line-height: 1.7; }
+
+  /* WORK */
+  .work {
+    padding: 100px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .work-sub {
+    color: #a1a1b5;
+    margin-top: -40px;
+    margin-bottom: 48px;
+    font-size: 1rem;
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .portfolio-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .portfolio-card:hover {
+    border-color: rgba(124,58,237,0.4);
+    transform: translateY(-3px);
+  }
+  .portfolio-img {
+    height: 160px;
+    background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(8,8,10,0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(124,58,237,0.5);
+  }
+  .portfolio-info { padding: 16px 20px; }
+  .industry-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .portfolio-info p { font-size: 0.9rem; color: #a1a1b5; }
+
+  /* FAQ */
+  .faq {
+    padding: 100px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .faq-list { margin-bottom: 40px; }
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 24px 0;
+  }
+  .faq-item summary {
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: var(--accent);
+    transition: transform 0.2s;
+  }
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+  .faq-item p {
+    margin-top: 16px;
+    color: #a1a1b5;
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+  .faq-email {
+    color: #6b6b80;
+    font-size: 0.9rem;
+  }
+  .faq-email a { color: var(--accent); text-decoration: underline; }
+
+  /* CTA */
+  .cta {
+    padding: 120px 0;
+    text-align: center;
+    background: radial-gradient(ellipse 70% 80% at 50% 100%, rgba(124,58,237,0.2) 0%, transparent 70%);
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .cta p {
+    color: #a1a1b5;
+    font-size: 1.1rem;
+    margin-bottom: 36px;
+    margin-top: 16px;
+  }
+  .btn-large { padding: 18px 40px; font-size: 1.1rem; border-radius: 12px; }
+
+  /* FOOTER */
+  footer {
+    padding: 48px 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    color: #6b6b80;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: white; }
+  .footer-copy {
+    color: #4a4a5a;
+    font-size: 0.8rem;
+  }
+</style>
