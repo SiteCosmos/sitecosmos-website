@@ -30,7 +30,7 @@ import Layout from '../layouts/Layout.astro';
         We build and manage <strong>conversion-focused websites</strong> so you show up on Google,
         look the part, and turn visitors into paying clients.
       </p>
-      <a href="mailto:info@sitecosmos.com" class="btn-primary btn-large">Book a Call →</a>
+      <a href="https://calendly.com/sitecosmos-info" target="_blank" class="btn-primary btn-large">Book a Call →</a>
     </div>
   </section>
 
@@ -102,12 +102,13 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="start-cta">
+  <!-- CALENDLY EMBED -->
+  <section class="calendly-section">
     <div class="container">
-      <h2>Ready to grow your business?</h2>
-      <p>Send us a message and we'll get back to you within 24 hours.</p>
-      <a href="mailto:info@sitecosmos.com" class="btn-primary btn-large">Book a Call →</a>
+      <h2>Pick a time that works for you</h2>
+      <p class="calendly-sub">Free 30-minute call. No obligation.</p>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/sitecosmos-info?hide_gdpr_banner=1&background_color=08080a&text_color=ffffff&primary_color=7c3aed"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
   </section>
 
@@ -334,28 +335,27 @@ import Layout from '../layouts/Layout.astro';
     flex-shrink: 0;
   }
 
-  /* CTA */
-  .start-cta {
-    padding: 6rem 2rem;
+  /* CALENDLY */
+  .calendly-section {
+    padding: 5rem 2rem 6rem;
     text-align: center;
-    position: relative;
+  }
+  .calendly-section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+  .calendly-sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .calendly-inline-widget {
+    min-width: 320px;
+    height: 700px;
+    border-radius: 12px;
     overflow: hidden;
-  }
-  .start-cta::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 400px;
-    background: radial-gradient(ellipse, rgba(124,58,237,0.25) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .start-cta p {
-    color: rgba(255,255,255,0.6);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
   }
 
   /* FOOTER */
@@ -365,12 +365,4 @@ import Layout from '../layouts/Layout.astro';
   }
   .footer-inner {
     max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .footer-copy { color: rgba(255,255,255,0.4); font-size: 0.9rem; }
-</style>
+    margin: 
