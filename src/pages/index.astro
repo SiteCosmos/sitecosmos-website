@@ -113,14 +113,22 @@ const faqs = [
       <h2>Real sites we build<br />and manage every day.</h2>
       <p class="work-sub">Every site is live and managed by us.</p>
       <div class="portfolio-grid">
-        {["Construction", "Landscaping", "Roofing", "Commercial Cleaning", "Steel Fabrication", "Window Cleaning"].map(industry => (
+        {[
+          { industry: "Personal Training", name: "Client Website", url: "#" },
+          { industry: "Personal Training", name: "Client Website", url: "#" },
+          { industry: "Personal Training", name: "Client Website", url: "#" },
+          { industry: "Restaurant", name: "Client Website", url: "#" },
+          { industry: "Construction", name: "Client Website", url: "#" },
+          { industry: "Landscaping", name: "Client Website", url: "#" },
+        ].map(item => (
           <div class="portfolio-card">
             <div class="portfolio-img">
-              <span>{industry.charAt(0)}</span>
+              <span>{item.industry.charAt(0)}</span>
             </div>
             <div class="portfolio-info">
-              <span class="industry-tag">{industry.toUpperCase()}</span>
-              <p>Client Website</p>
+              <span class="industry-tag">{item.industry.toUpperCase()}</span>
+              <p>{item.name}</p>
+              <a href={item.url} class="view-site-btn" target="_blank">View Site →</a>
             </div>
           </div>
         ))}
@@ -412,16 +420,36 @@ const faqs = [
     font-weight: 900;
     color: rgba(37,99,235,0.5);
   }
-  .portfolio-info { padding: 16px 20px; }
+  .portfolio-info {
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
   .industry-tag {
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     color: var(--accent);
     display: block;
-    margin-bottom: 4px;
   }
   .portfolio-info p { font-size: 0.9rem; color: #a1a1b5; }
+  .view-site-btn {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid rgba(37,99,235,0.35);
+    border-radius: 6px;
+    padding: 5px 12px;
+    width: fit-content;
+    transition: background 0.2s, color 0.2s;
+  }
+  .view-site-btn:hover {
+    background: var(--accent);
+    color: #fff;
+  }
 
   /* FAQ */
   .faq {
@@ -483,30 +511,4 @@ const faqs = [
   /* FOOTER */
   footer {
     padding: 48px 0;
-    border-top: 1px solid rgba(255,255,255,0.06);
-  }
-  .footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 24px;
-    margin-bottom: 32px;
-  }
-  .footer-links {
-    display: flex;
-    gap: 28px;
-    flex-wrap: wrap;
-  }
-  .footer-links a {
-    color: #6b6b80;
-    font-size: 0.875rem;
-    transition: color 0.2s;
-  }
-  .footer-links a:hover { color: white; }
-  .footer-copy {
-    color: #4a4a5a;
-    font-size: 0.8rem;
-  }
-</style>
-                                                                                                                                                                                                                                                                                                                                                                                                
+    border-top
